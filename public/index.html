@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimplePage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rock+3D&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../src/main.css"/>
+</head>
+<body>
+    <main>
+        <section id="hero" class="container">
+            <div id="hero-model">
+                <!-- Container for three.js scene -->
+            </div>
+            <div id="hero-name">
+                <h1>Juan Miguel Gonzalez</h1>
+            </div>
+        </section>
+        <section id="about" class="container">
+            <p>Hi, im Juan. I currently live in Gulfport Mississippi and i'm pursuing my Undergraduate Coding Certification offered by Harvard Extension School. I started coding around 2016, mostly as a hobby and a personal challange. Around 2018 i started learning more about computer science in general and developed a liking for front end development.</p>
+            <div id="favorite-place">
+                <h4>My favorite place is Muir Woods north of San Francisco, California.</h4>
+                <img src="./g851.png" alt="Picture of San Francisco Ferry Building"/>
+            </div>
+        </section>
+        <section class="container">
+
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/loaders/DRACOLoader.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="/src/heroModel.js"></script>
+</html>
