@@ -27,6 +27,7 @@ const initModel = () => {
     controls.maxDistance = 3.6;
     controls.minDistance = 2.5;
   
+    controls.enablePan = false;
     controls.screenSpacePanning = false;
 
     // Create light source
