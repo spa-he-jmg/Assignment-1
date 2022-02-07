@@ -28,10 +28,6 @@ const initModel = () => {
     controls.minDistance = 2.5;
   
     controls.enablePan = false;
-    controls.touches = {
-        ONE: THREE.TOUCH.ROTATE,
-        TWO: False
-    }
     controls.screenSpacePanning = false;
 
     // Create light source
