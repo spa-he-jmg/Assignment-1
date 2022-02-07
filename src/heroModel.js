@@ -44,7 +44,7 @@ const initModel = () => {
     loader.setDRACOLoader(dracoLoader);
 
     // Load model
-    loader.load( './cactus_plant_web_small.glb', function ( gltf ) {
+    loader.load( './src/cactus_plant_web_small.glb', function ( gltf ) {
         console.log('Loaded..');
         console.log(gltf);
         scene.add(gltf.scene);
