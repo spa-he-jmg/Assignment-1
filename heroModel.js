@@ -14,7 +14,7 @@ const initModel = () => {
     renderer.setSize(container.clientWidth, container.clientHeight);
     container.appendChild(renderer.domElement);
 
-    // Create controls
+    // Create and config controls
     const controls = new THREE.OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true; // an animation loop is required when either damping or auto-rotation are enabled
     controls.dampingFactor = 0.05;
@@ -23,14 +23,12 @@ const initModel = () => {
     controls.target.y = camera.position.y;
     controls.minPolarAngle = 0;
     controls.maxPolarAngle = Math.PI * 0.5;
-
     controls.maxDistance = 3.6;
     controls.minDistance = 2.5;
-  
     controls.enablePan = false;
     controls.screenSpacePanning = false;
 
-    // Create light source
+    // Create and add light source
     const light = new THREE.HemisphereLight(0xffffbb, 0x080820, 1.75);
     scene.add(light);
 
@@ -47,7 +45,7 @@ const initModel = () => {
     // Load model
     loader.load( './cactus_plant_web_small.glb', function ( gltf ) {
         console.log('Loaded..');
-        console.log(gltf);
+        // Add model to scene
         scene.add(gltf.scene);
     
     }, undefined, function ( error ) {
@@ -56,27 +54,38 @@ const initModel = () => {
     
     });
 
+    // Render
     const render = () => {
-            controls.update();
-            renderer.render(scene, camera);
-            requestAnimationFrame(render);
+        // Update controls
+        controls.update();
+        // Render scene
+        renderer.render(scene, camera);
+        // Animate
+        requestAnimationFrame(render);
     }
 
+    // Animation loop
     const animate = () => { 
         controls.update();
-        //requestAnimationFrame(animate);
         render();
     }
 
+    // Init
     render();
 
+    // Update canvas when window is resized
     const resize = () => {
+        // Set size of renderer to new container size
         renderer.setSize(container.clientWidth, container.clientHeight);
+
+        // Update aspect ratio of camera to container ratio
         camera.aspect = container.clientWidth / container.clientHeight;
         camera.pixelRatio = window.pixelRatio;
+        // Update camera config
         camera.updateProjectionMatrix();
     }
 
+    // Add event listener for resize
     window.addEventListener('resize', resize, false);
 }
 

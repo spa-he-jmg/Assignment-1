@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+/* I need to work on my CSS i'm a bit rusty */
 html, body {
     margin: 0;
     padding: 0;
@@ -68,7 +69,7 @@ p {
     max-width: 900px;
 }
 
-#about, #favorites {
+#about {
     height: fit-content;
     flex-direction: column;
     padding: 25px 15px;
@@ -158,7 +159,7 @@ form h4 {
 }
 
 input {
-    height: 35px;
+    height: 40px;
     margin-bottom: 10px;
     background: none;
     color: white;
