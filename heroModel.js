@@ -1,3 +1,5 @@
+//First time working with 3D models and three.js, lots of fun
+
 // Initialize hero model
 const initModel = () => {
     // Grab render container
