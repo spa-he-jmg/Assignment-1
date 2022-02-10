@@ -158,11 +158,16 @@ form h4 {
 }
 
 input {
+    height: 35px;
     margin-bottom: 10px;
     background: none;
     color: white;
     border: 1px solid white;
     border-radius: 2px;
+}
+
+#confirm-sub {
+    height: auto;
 }
 
 #confirm-wrapper {
@@ -226,6 +231,8 @@ button:hover {
 
     #info {
         flex-direction: row;
+        max-width: 950px;
+        margin-bottom: 40px;
     }
 
     #info .info-card {
@@ -234,13 +241,17 @@ button:hover {
 
     #closing {
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         gap: 25px;
     }
 
     #fav-place-img {
         order: 5;
         width: 360px;
+    }
+
+    #closing {
+        max-width: 950px;
     }
 
 }
